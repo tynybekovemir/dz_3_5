@@ -87,7 +87,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'core.wsgi.application'
 
 ASGI_APPLICATION = 'core.routing.application'
-# settings.py
 
 ASGI_APPLICATION = "core.routing.websocket_urlpatterns"
 
@@ -97,9 +96,17 @@ ASGI_APPLICATION = "core.routing.websocket_urlpatterns"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'emir',
+        'USER': 'emir',
+        'PASSWORD': '12345',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
+
+
 
 
 # Password validation
